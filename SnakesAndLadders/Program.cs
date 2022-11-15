@@ -13,6 +13,9 @@ namespace SnakesAndLadders
             int FirstPosition=0;
             int PlayerPosition=FirstPosition;
             Console.WriteLine("First player is starting with position " + FirstPosition);
+            Random random = new Random();
+            int DiceRoll = random.Next(1, 7);
+            Console.WriteLine("The number player got through dice is " + DiceRoll); 
             Console.ReadLine();
         }
     }
