@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SnakesAndLadders
@@ -13,9 +14,11 @@ namespace SnakesAndLadders
             const int FirstPosition =0;
             int position = 0;
             int DiceRoll;
+            int count = 0;
             Console.WriteLine("First player is starting with position " + FirstPosition);
             while(position < 100)
             {
+                count++;
                 Random random = new Random();
                 DiceRoll = random.Next(1, 7);
                 Console.WriteLine("The number player got through dice is " + DiceRoll);
@@ -48,7 +51,7 @@ namespace SnakesAndLadders
                 }
                 Console.WriteLine("The player position is: " + position);
             }
-
+            Console.WriteLine("No of times dice rolled is:" +count);    
             Console.ReadLine();
         }
     }
